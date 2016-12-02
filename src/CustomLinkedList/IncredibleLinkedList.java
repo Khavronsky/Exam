@@ -1,15 +1,16 @@
 package CustomLinkedList;
 
 public class IncredibleLinkedList {
+
+
     private LinkedItem currentItem;
 
     void add(int value) {
         currentItem = new LinkedItem(currentItem, value);
     }
 
-
-    void add(int index, int value) {
-
+    void invert(){
+//TODO инвертировать список
     }
 
     int get(int index) {
