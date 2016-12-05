@@ -13,6 +13,14 @@ public class IncredibleLinkedList {
 //TODO инвертировать список
     }
 
+    void clear(int index){
+
+    }
+
+    void sort(){
+
+    }
+
     int get(int index) {
         int value = 0;
         LinkedItem item = currentItem;

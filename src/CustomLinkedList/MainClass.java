@@ -1,6 +1,6 @@
 package CustomLinkedList;
 
-public class MainClass {
+class MainClass {
     public static void main(String[] args) {
         IncredibleLinkedList list = new IncredibleLinkedList();
         list.add(1);
