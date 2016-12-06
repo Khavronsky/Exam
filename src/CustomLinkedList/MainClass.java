@@ -8,6 +8,8 @@ class MainClass {
         int[] addArray = {0, 5, 1, 6, 2, 7, 3, 8, 4, 9};
         int getIndex = 3;
         int clearIndex = 4;
+        int replaceIndex = 2;
+        int replaceValue = 8;
 
         addMethodTest(list, addArray);
         getMethodTest(list, getIndex);
@@ -15,6 +17,15 @@ class MainClass {
         invertMethodTest(list);
         clearMethodTest(list, clearIndex);
         sizeMethodTest(list);
+        replaceMethodTest (list, replaceIndex, replaceValue);
+    }
+
+    private static void replaceMethodTest(IncredibleLinkedList list, int replaceIndex, int replaceValue) {
+        System.out.println("Replace " + replaceIndex + " element");
+        System.out.println("list before replace " + list);
+        list.replace(replaceIndex, replaceValue);
+        System.out.println("list after replace " + list);
+        System.out.println("_____\n");
     }
 
     private static void addMethodTest(IncredibleLinkedList list, int[] addArray) {

@@ -22,6 +22,14 @@ public class IncredibleLinkedList {
         return value;
     }
 
+    void replace (int index, int value) {
+        LinkedItem item = currentItem;
+        for (int i = 0; i < size() - 1 - index; i++) {
+            item = item.nextItem;
+        }
+        item.value = value;
+    }
+
     int size() {
         int counter = 0;
         LinkedItem item = currentItem;
@@ -44,6 +52,10 @@ public class IncredibleLinkedList {
             sortedItem = new LinkedItem(sortedItem, sortedArr);
         }
         currentItem = sortedItem;
+    }
+    void sort2(){
+
+
     }
 
     void invert() {
