@@ -17,7 +17,7 @@ class MainClass {
         invertMethodTest(list);
         clearMethodTest(list, clearIndex);
         sizeMethodTest(list);
-        replaceMethodTest (list, replaceIndex, replaceValue);
+        replaceMethodTest(list, replaceIndex, replaceValue);
     }
 
     private static void replaceMethodTest(IncredibleLinkedList list, int replaceIndex, int replaceValue) {

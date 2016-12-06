@@ -20,7 +20,7 @@ public class IncredibleLinkedList {
         return value;
     }
 
-    void replace (int index, int value) {
+    void replace(int index, int value) {
         LinkedItem item = currentItem;
         for (int i = 0; i < size() - 1 - index; i++) {
             item = item.nextItem;
@@ -38,15 +38,15 @@ public class IncredibleLinkedList {
         return counter;
     }
 
-    void sort(){
+    void sort() {
         int tmp;
         for (int i = size() - 1; i > 1; i--) {
             for (int j = 0; j < i; j++) {
 
-                if (get(j) > get(j+1)){
+                if (get(j) > get(j + 1)) {
                     tmp = get(j);
-                    replace(j, get(j+1));
-                    replace(j+1, tmp);
+                    replace(j, get(j + 1));
+                    replace(j + 1, tmp);
                 }
             }
         }
