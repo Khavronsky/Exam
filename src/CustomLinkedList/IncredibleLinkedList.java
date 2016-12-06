@@ -1,5 +1,7 @@
 package CustomLinkedList;
 
+import java.util.Arrays;
+
 public class IncredibleLinkedList {
 
 
@@ -32,7 +34,17 @@ public class IncredibleLinkedList {
     }
 
     void sort(){
-
+        int[] arr = new int[size()];
+        LinkedItem sortedItem = null;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = currentItem.value;
+            currentItem = currentItem.nextItem;
+        }
+        Arrays.sort(arr);
+        for (int sortedArr : arr) {
+            sortedItem = new LinkedItem(sortedItem, sortedArr);
+        }
+        currentItem = sortedItem;
     }
 
     int get(int index) {
