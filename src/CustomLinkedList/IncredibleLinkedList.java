@@ -10,7 +10,13 @@ public class IncredibleLinkedList {
     }
 
     void invert(){
-//TODO инвертировать список
+        LinkedItem invertedItem = null;
+        int size = size();
+        for (int i = 0; i < size; i++) {
+            invertedItem = new LinkedItem(invertedItem, currentItem.value);
+            currentItem = currentItem.nextItem;
+        }
+        currentItem = invertedItem;
     }
 
     void clear(int index){
