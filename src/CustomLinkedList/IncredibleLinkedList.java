@@ -14,7 +14,15 @@ public class IncredibleLinkedList {
     }
 
     void clear(int index){
-
+        LinkedItem itemBefore = currentItem;
+        for (int i = 0; i < size() - 2 - index; i++) {
+            itemBefore = itemBefore.nextItem;
+        }
+        LinkedItem itemAfter = itemBefore;
+        for (int i = 0; i < 2; i++) {
+            itemAfter = itemAfter.nextItem;
+        }
+        itemBefore.nextItem = itemAfter;
     }
 
     void sort(){
