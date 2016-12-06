@@ -1,22 +1,57 @@
 package CustomLinkedList;
 
 class MainClass {
+
     public static void main(String[] args) {
+
         IncredibleLinkedList list = new IncredibleLinkedList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
-        list.add(7);
-        list.add(8);
-        list.add(9);
-        list.add(10);
+        int[] addArray = {0, 5, 1, 6, 2, 7, 3, 8, 4, 9};
+        int getIndex = 3;
+        int clearIndex = 4;
 
-        System.out.println(list);
-        System.out.println(list.size());
-        System.out.println(list.get(2));
+        addMethodTest(list, addArray);
+        getMethodTest(list, getIndex);
+        sortMethodTest(list);
+        invertMethodTest(list);
+        clearMethodTest(list, clearIndex);
+        sizeMethodTest(list);
+    }
 
+    private static void addMethodTest(IncredibleLinkedList list, int[] addArray) {
+        System.out.println("Method add working: added " + addArray.length + " elements");
+        for (int array : addArray) {
+            list.add(array);
+        }
+        System.out.println("List: " + list);
+        System.out.println("_____\n");
+    }
+
+    private static void getMethodTest(IncredibleLinkedList list, int getIndex) {
+        System.out.println("Method get(getIndex " + getIndex + ") return: " + list.get(getIndex));
+        System.out.println("_____\n");
+    }
+
+    private static void sizeMethodTest(IncredibleLinkedList list) {
+        System.out.println("list size: " + list.size());
+        System.out.println("_____\n");
+    }
+
+    private static void sortMethodTest(IncredibleLinkedList list) {
+        list.sort();
+        System.out.println("Sorted list: " + list);
+        System.out.println("_____\n");
+    }
+
+    private static void invertMethodTest(IncredibleLinkedList list) {
+        list.invert();
+        System.out.println("Inverted list: " + list);
+        System.out.println("_____\n");
+    }
+
+    private static void clearMethodTest(IncredibleLinkedList list, int clearIndex) {
+        list.clear(clearIndex);
+        System.out.println("Clear " + clearIndex + " element.");
+        System.out.println("list after clear element: " + list);
+        System.out.println("_____\n");
     }
 }
